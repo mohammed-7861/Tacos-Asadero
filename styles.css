@@ -333,7 +333,47 @@ body {
     color: #333;
     margin: 0 0.5rem;
 }
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e74c3c;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 20px;
+    z-index: 1000;
+}
 
+.back-to-top:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Image Loading Effect */
+.featured-item img {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.featured-item img.loaded {
+    opacity: 1;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
@@ -367,4 +407,26 @@ body {
     .menu-container {
         grid-template-columns: 1fr;
     }
+}
+/* ... your existing CSS ... */
+
+/* Fan Favorites Styling */
+.menu-category:first-child {
+    background-color: #fff5f5;
+    border: 2px solid #e74c3c;
+}
+
+.menu-category:first-child h3 {
+    color: #e74c3c;
+    font-size: 2rem;
+}
+
+.menu-category:first-child .menu-item:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* ... your existing responsive CSS ... */
 }
