@@ -77,12 +77,9 @@ body {
 }
 
 /* Hero Section */
-/* Hero Section - try these different variations */
-/* Hero Section */
-/* Hero Section */
 .hero {
     height: 100vh;
-    background-image: url('images/home.png');
+    background-image: url('/Tacos-Asadero/images/home.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -100,14 +97,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0); /* Darkens the image slightly */
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-
 }
+
 .hero-content {
     padding: 2rem;
 }
@@ -116,7 +113,6 @@ body {
     width: 200px;
     margin-bottom: 2rem;
     object-fit: contain;
-    /* Add these new properties */
     filter: drop-shadow(0 0 10px rgba(10, 10, 10, 10));
     background-color: rgb(255, 255, 255);
     padding: 1px;
@@ -125,7 +121,6 @@ body {
     -webkit-backdrop-filter: blur(.001px);
 }
 
-/* Optional: Add hover effect */
 .hero-logo:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
@@ -185,10 +180,16 @@ body {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
     -ms-interpolation-mode: nearest-neighbor;
-    transform: scale(1.0);  /* Removed zoom to maintain clarity */
-    backface-visibility: hidden;  /* Helps with image sharpness */
+    transform: scale(1.0);
+    backface-visibility: hidden;
     max-width: 100%;
     display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.featured-item img.loaded {
+    opacity: 1;
 }
 
 .featured-item:hover img {
@@ -215,6 +216,22 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+}
+
+/* Fan Favorites Styling */
+.menu-category:first-child {
+    background-color: #fff5f5;
+    border: 2px solid #e74c3c;
+}
+
+.menu-category:first-child h3 {
+    color: #e74c3c;
+    font-size: 2rem;
+}
+
+.menu-category:first-child .menu-item:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .menu-category {
@@ -333,6 +350,7 @@ body {
     color: #333;
     margin: 0 0.5rem;
 }
+
 /* Back to Top Button */
 .back-to-top {
     position: fixed;
@@ -365,15 +383,6 @@ body {
     visibility: visible;
 }
 
-/* Image Loading Effect */
-.featured-item img {
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
-}
-
-.featured-item img.loaded {
-    opacity: 1;
-}
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
@@ -407,26 +416,4 @@ body {
     .menu-container {
         grid-template-columns: 1fr;
     }
-}
-/* ... your existing CSS ... */
-
-/* Fan Favorites Styling */
-.menu-category:first-child {
-    background-color: #fff5f5;
-    border: 2px solid #e74c3c;
-}
-
-.menu-category:first-child h3 {
-    color: #e74c3c;
-    font-size: 2rem;
-}
-
-.menu-category:first-child .menu-item:hover {
-    background-color: rgba(231, 76, 60, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    /* ... your existing responsive CSS ... */
 }
