@@ -79,7 +79,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background-image: url('/Tacos-Asadero/images/home.png');
+    background-image: url('home.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
